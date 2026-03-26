@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Orvessa Root Haven | Privacy Policy</title>
+    <!-- Google Fonts + simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / nav (consistent with main brand) */
+        .site-header {
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255,255,255,0.96);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+        .logo p {
+            font-size: 0.85rem;
+            color: #3a3a3a;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            margin-left: 32px;
+            color: #1f1f1f;
+            font-weight: 500;
+            transition: 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #000;
+            color: #000;
+        }
+
+        /* page title block */
+        .page-header {
+            background: #fefefe;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: #3a3a3a;
+            max-width: 780px;
+        }
+
+        /* privacy content styling */
+        .legal-content {
+            padding: 60px 0 80px;
+        }
+        .legal-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 32px;
+            border: 1px solid #ececec;
+            padding: 48px 56px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+        .legal-section {
+            margin-bottom: 48px;
+        }
+        .legal-section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #000;
+            padding-left: 20px;
+        }
+        .legal-section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 28px 0 12px 0;
+            color: #111;
+        }
+        .legal-section p {
+            margin-bottom: 18px;
+            color: #2b2b2b;
+            line-height: 1.6;
+        }
+        .legal-section ul, .legal-section ol {
+            margin: 16px 0 24px 32px;
+        }
+        .legal-section li {
+            margin-bottom: 8px;
+            color: #2b2b2b;
+        }
+        .legal-section a {
+            color: #000;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-weight: 500;
+        }
+        .legal-section a:hover {
+            text-decoration: none;
+            background: #f0f0f0;
+        }
+        .highlight-box {
+            background: #faf9f9;
+            border-left: 3px solid #000;
+            padding: 20px 28px;
+            margin: 28px 0;
+            border-radius: 20px;
+            font-size: 0.98rem;
+        }
+        hr {
+            margin: 32px 0;
+            border: none;
+            border-top: 1px solid #eaeaea;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 32px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid #aaa;
+        }
+        .back-link:hover {
+            border-bottom-color: #000;
+        }
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0 10px;
+        }
+        .badge {
+            background: #f1f1f1;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2c2c2c;
+        }
+
+        /* footer */
+        footer {
+            background: #000;
+            color: #e0e0e0;
+            padding: 48px 0 32px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+        .footer-contact p {
+            margin-bottom: 8px;
+        }
+        .footer-contact a {
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-links a {
+                margin: 0 12px;
+            }
+            .page-header h1 {
+                font-size: 2.3rem;
+            }
+            .legal-card {
+                padding: 28px 20px;
+            }
+            .legal-section h2 {
+                font-size: 1.5rem;
+                padding-left: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Orvessa Root Haven</h1>
+            <p>where roots meet resilience · monochrome gardening philosophy</p>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms Of Privacy</a>
+            <a href="privacy.html" style="border-bottom-color: #000;">Privacy Policy</a>
+            <a href="cookies.html">Cookies Policy</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Rooted in transparency — how we tend to your personal data with the same care as our heirloom seeds.</p>
+        </div>
+    </div>
+
+    <div class="legal-content">
+        <div class="container">
+            <div class="legal-card">
+                <!-- MAIN PRIVACY CONTENT: detailed, GDPR/CCPA aligned, gardening spirit -->
+                <div class="legal-section">
+                    <p><strong>Effective Date:</strong> March 23, 2026 &nbsp;|&nbsp; <strong>Last Reviewed:</strong> March 23, 2026</p>
+                    <p>At Orvessa Root Haven (“we,” “us,” or “our”), your privacy is not merely a legal obligation — it is an extension of our philosophy: cultivating trust, honoring boundaries, and preserving what is essential. This Privacy Policy describes how we collect, use, share, and protect information when you visit our website, engage with our monochrome gardening community, purchase digital guides, or subscribe to our seasonal newsletters. We operate globally but remain committed to minimal, purposeful data practices.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>1. Information We Collect</h2>
+                    <p>We collect only the data that helps us enrich your gardening journey or that is required for security and functionality.</p>
+                    <h3>Personal Data You Provide</h3>
+                    <ul>
+                        <li><strong>Identity & Contact details:</strong> Name, email address, postal address (if ordering physical goods or consultations), phone number, and any details you share via contact forms, event registrations, or the “garden journal” correspondence.</li>
+                        <li><strong>Transaction data:</strong> Payment information (processed securely by third-party gateways; we never store full card details), purchase history of digital guides, consultations, or limited botanical offerings.</li>
+                        <li><strong>Gardening preferences:</strong> Your interest in monochrome landscapes, favorite plant genera, climate zone — if you choose to share them, we personalize content accordingly.</li>
+                    </ul>
+                    <h3>Automatically Collected Information</h3>
+                    <ul>
+                        <li><strong>Technical data:</strong> IP address, browser type, operating system, device identifiers, referral URLs, and pages visited — collected via cookies and similar technologies (see Section 3).</li>
+                        <li><strong>Usage analytics:</strong> Aggregated interactions with our 79,000+ word horticultural library, time spent on pages, and search queries to improve our knowledge base.</li>
+                    </ul>
+                    <div class="badge-grid">
+                        <span class="badge">🌱 minimal data ethos</span>
+                        <span class="badge">🔒 no data selling</span>
+                        <span class="badge">🌿 GDPR & CCPA ready</span>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. How We Use Your Information</h2>
+                    <p>Every piece of data we handle serves a purpose rooted in service, education, and improvement:</p>
+                    <ul>
+                        <li>To deliver inspiring content: seasonal gardening guides, black-and-white planting design essays, and workshop invites.</li>
+                        <li>To process transactions and provide consultation confirmations or digital product access.</li>
+                        <li>To respond to your questions, honor data subject requests, and support the community.</li>
+                        <li>To analyze trends and enhance user experience — for example, understanding which monochrome plant profiles resonate most.</li>
+                        <li>To protect our digital garden: detect security incidents, prevent fraud, and enforce our Terms of Service.</li>
+                    </ul>
+                    <p><strong>Legal bases (GDPR Article 6):</strong> We process personal data based on your consent, contractual necessity, compliance with legal obligations, and our legitimate interests in maintaining a safe, educational platform and improving our offerings.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Cookies & Similar Technologies</h2>
+                    <p>We use minimal, privacy-conscious cookies to ensure the site functions seamlessly and to gather anonymous insights. Our website uses:</p>
+                    <ul>
+                        <li><strong>Essential cookies:</strong> Required for navigation, security, and remembering cookie consent choices. Without them, the site may not perform correctly.</li>
+                        <li><strong>Functional preferences:</strong> To remember your language or region if you interact with zone-specific gardening tips.</li>
+                        <li><strong>Analytics cookies (anonymized):</strong> We utilize privacy-forward analytics (Google Analytics with IP masking enabled, or similar tools) that do not identify you individually. These help us understand which articles about soil pH, ferns, or dark foliage are most valued.</li>
+                    </ul>
+                    <p>You can manage cookie preferences via your browser settings. Note that disabling essential cookies may impact your experience. For complete details, please see our separate <a href="cookies.html">Cookies Policy</a>.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Sharing & Disclosure of Information</h2>
+                    <p>We never sell, rent, or trade your personal data. Limited sharing occurs only with trusted partners who assist us in operating the website and serving you, under strict confidentiality and data protection agreements:</p>
+                    <ul>
+                        <li><strong>Service providers:</strong> Email marketing platforms (e.g., Mailchimp or similar), payment processors (Stripe, PayPal), and cloud hosting services. They access only the data necessary to perform their functions.</li>
+                        <li><strong>Legal compliance:</strong> If required by law, court order, or governmental regulation, we may disclose information to protect our rights, users, or the public.</li>
+                        <li><strong>Business transitions:</strong> In the unlikely event of a merger or acquisition, your data would be transferred with the same privacy commitments.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        🌿 <strong>Third-party links:</strong> Our content may include links to seed banks, botanical gardens, or partner resources. Those sites have their own privacy policies, and we encourage you to review them. Orvessa Root Haven is not responsible for external practices.
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. International Data Transfers & Storage</h2>
+                    <p>Our website is hosted in the United States, and data may be processed in countries where our service providers operate. When we transfer personal data from the European Economic Area (EEA), Switzerland, or the UK, we rely on appropriate safeguards such as Standard Contractual Clauses (SCCs) or adequacy decisions, ensuring your data receives equivalent protection. By using our site, you acknowledge this global nature of data processing.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Data Retention & Security</h2>
+                    <p><strong>Retention:</strong> We retain personal data only as long as necessary to fulfill the purposes outlined in this policy or as required by law. For example:</p>
+                    <ul>
+                        <li>Newsletter subscribers: data stored until you unsubscribe or request deletion.</li>
+                        <li>Transaction records: kept for tax, accounting, and warranty purposes (typically 7 years).</li>
+                        <li>Analytics logs: anonymized or aggregated after 26 months.</li>
+                    </ul>
+                    <p><strong>Security:</strong> We implement robust technical and organizational measures — SSL/TLS encryption, access controls, regular security audits — to protect your information. However, no internet transmission is 100% secure, so we encourage you to use strong credentials and contact us if you suspect any vulnerability.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. Your Privacy Rights (GDPR, CCPA, LGPD & more)</h2>
+                    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                    <ul>
+                        <li><strong>Right to access:</strong> Request a copy of the data we hold about you.</li>
+                        <li><strong>Right to rectification:</strong> Correct inaccurate or incomplete information.</li>
+                        <li><strong>Right to erasure (“right to be forgotten”):</strong> Request deletion of your data, subject to legal obligations.</li>
+                        <li><strong>Right to restriction:</strong> Limit how we process your data in certain circumstances.</li>
+                        <li><strong>Right to data portability:</strong> Receive your data in a structured, machine-readable format.</li>
+                        <li><strong>Right to object:</strong> Opt out of direct marketing or processing based on legitimate interests.</li>
+                        <li><strong>Right to non-discrimination (CCPA):</strong> We will not discriminate against you for exercising your privacy rights.</li>
+                    </ul>
+                    <p>To exercise your rights, email us at <a href="mailto:privacy@orvessaroothaven.com">privacy@orvessaroothaven.com</a> with “Privacy Request” in the subject line. We will verify your identity and respond within 30 days (or as required by local law). You may also lodge a complaint with your local supervisory authority.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. Children’s Privacy</h2>
+                    <p>Orvessa Root Haven is intended for a general audience and does not knowingly collect personal information from children under 13 years of age. If you believe a child has provided us with data, please contact us immediately, and we will delete it. For users under 16 in the EU/EEA, we require parental consent for newsletter subscriptions or interactive features.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>9. California Privacy Rights (CCPA)</h2>
+                    <p>California residents have additional rights: you may request disclosure of categories and specific pieces of personal data collected, opt-out of “sales” (we do not sell data), and request deletion. To exercise these rights, please use the contact information below. We will not discriminate against you for exercising CCPA rights.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>10. Updates to This Privacy Policy</h2>
+                    <p>We may revise this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. The “Effective Date” at the top indicates when the latest version was published. Material changes will be communicated via a prominent notice on our website or email (for registered users). We encourage you to review this page periodically to stay informed about how we are protecting your data.</p>
+                </div>
+
+                <hr>
+
+                <div class="legal-section">
+                    <h2>📬 Contact Us & Data Steward</h2>
+                    <p>If you have any questions, concerns, or requests about this Privacy Policy or how we handle your data, please reach out to our dedicated Data Steward:</p>
+                    <p><strong>Orvessa Root Haven – Privacy Office</strong><br>
+                    142 Blackwood Lane, Evergreen Valley, Ashford, CA 95684, USA<br>
+                    Email: <a href="mailto:privacy@orvessaroothaven.com">privacy@orvessaroothaven.com</a><br>
+                    Phone: +1 (551) 987-6543 (Mon–Fri, 9am–4pm PT)</p>
+                    <div class="highlight-box">
+                        🌻 <strong>Your trust is our soil:</strong> We aim to answer every privacy inquiry within 5 business days and treat your data with the same respect we give to heritage gardens. Thank you for being part of Orvessa Root Haven.
+                    </div>
+                    <a href="index.html" class="back-link">← Return to the garden journal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Orvessa Root Haven</h3>
+                <p>rooted in contrast · growing tomorrow</p>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Visit & correspond</strong></p>
+                <p>📍 142 Blackwood Lane, Evergreen Valley,<br> &nbsp;&nbsp;&nbsp;Ashford, CA 95684, USA</p>
+                <p>📞 <a href="tel:+15519876543">+1 (551) 987-6543</a></p>
+                <p>✉️ hello@orvessaroothaven.com</p>
+                <p>🔒 privacy@orvessaroothaven.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Orvessa Root Haven — Black & White Gardening Atelier. All text and imagery cultivated with intention. | <a href="privacy.html" style="color:#ccc;">Privacy Policy</a> | <a href="terms.html" style="color:#ccc;">Terms of Service</a> | <a href="cookies.html" style="color:#ccc;">Cookies</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

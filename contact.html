@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Orvessa Root Haven | Contact — Monochrome Gardening Atelier</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / nav (identical to main page style) */
+        .site-header {
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255,255,255,0.96);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+        .logo p {
+            font-size: 0.85rem;
+            color: #3a3a3a;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            margin-left: 32px;
+            color: #1f1f1f;
+            font-weight: 500;
+            transition: 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #000;
+            color: #000;
+        }
+
+        /* page title section */
+        .page-header {
+            padding: 60px 0 40px;
+            background: #fefefe;
+            border-bottom: 1px solid #eee;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: #000;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: #2c2c2c;
+            max-width: 680px;
+        }
+
+        /* contact main grid */
+        .contact-section {
+            padding: 70px 0 90px;
+        }
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        .contact-info {
+            flex: 1.2;
+            background: #fafafa;
+            border-radius: 32px;
+            padding: 40px 36px;
+            border: 1px solid #eaeaea;
+        }
+        .contact-info h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #000;
+        }
+        .info-detail {
+            margin-bottom: 32px;
+        }
+        .info-detail h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+            border-left: 3px solid #000;
+            padding-left: 12px;
+        }
+        .info-detail p, .info-detail a {
+            color: #2e2e2e;
+            text-decoration: none;
+            margin-bottom: 6px;
+            display: block;
+            font-size: 1rem;
+        }
+        .info-detail a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        .contact-hours {
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .contact-hours p {
+            margin-bottom: 8px;
+        }
+
+        .contact-form {
+            flex: 1.8;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 40px 36px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+        .contact-form h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #1f1f1f;
+        }
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 28px;
+            background: #fff;
+            transition: 0.2s;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #000;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+        }
+        .btn-submit {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 600;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            font-family: inherit;
+        }
+        .btn-submit:hover {
+            background: #2c2c2c;
+            transform: translateY(-2px);
+        }
+        .note-text {
+            font-size: 0.8rem;
+            color: #5a5a5a;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* garden map / image block */
+        .garden-connect {
+            background: #f5f5f5;
+            border-radius: 28px;
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            padding: 30px 40px;
+            border: 1px solid #e2e2e2;
+        }
+        .connect-text {
+            flex: 1;
+        }
+        .connect-text h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .connect-text p {
+            color: #2c2c2c;
+        }
+        .connect-img {
+            flex: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            max-width: 280px;
+        }
+        .connect-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(0.2);
+            transition: 0.3s;
+        }
+        .connect-img img:hover {
+            filter: grayscale(0);
+            transform: scale(1.02);
+        }
+
+        /* footer */
+        footer {
+            background: #000;
+            color: #e0e0e0;
+            padding: 48px 0 32px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+        .footer-contact p {
+            margin-bottom: 8px;
+        }
+        .footer-contact a {
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-links a {
+                margin: 0 12px;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .contact-grid {
+                flex-direction: column;
+            }
+            .garden-connect {
+                flex-direction: column;
+                text-align: center;
+            }
+            .connect-img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Orvessa Root Haven</h1>
+            <p>where roots meet resilience · monochrome gardening philosophy</p>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms Of Privacy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies Policy</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- page intro matching the atelier mood -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Reach the root<br>of our haven</h1>
+            <p>Whether you seek garden consultations, wish to visit our monochrome trial grounds, or simply wish to exchange thoughts on soil and silhouette — we welcome your voice. Every message is tended like a rare cutting.</p>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- left side: physical address, phone, etc -->
+                <div class="contact-info">
+                    <h2>Atelier & sanctuary</h2>
+                    <div class="info-detail">
+                        <h3>📍 Root sanctuary</h3>
+                        <p>142 Blackwood Lane, Evergreen Valley,</p>
+                        <p>Ashford, CA 95684, USA</p>
+                    </div>
+                    <div class="info-detail">
+                        <h3>📞 Converse with us</h3>
+                        <p><a href="tel:+15519876543">+1 (551) 987-6543</a></p>
+                        <p><a href="mailto:hello@orvessaroothaven.com">hello@orvessaroothaven.com</a></p>
+                        <p><a href="mailto:studio@orvessaroothaven.com">studio@orvessaroothaven.com</a> (design inquiries)</p>
+                    </div>
+                    <div class="contact-hours">
+                        <h3>🕊️ Opening hours (garden visits & shop)</h3>
+                        <p>Wednesday – Friday: 10:00 – 16:00</p>
+                        <p>Saturday: 9:30 – 17:00</p>
+                        <p>Sunday – Tuesday: closed for soil meditation & nursery prep</p>
+                        <p><em>Appointments recommended for private consultations.</em></p>
+                    </div>
+                    <div class="contact-hours" style="border-top-color:#ccc;">
+                        <h3>⛊ Press & partnerships</h3>
+                        <p>For collaborations, lectures, or monochrome garden features: <a href="mailto:press@orvessaroothaven.com">press@orvessaroothaven.com</a></p>
+                    </div>
+                </div>
+
+                <!-- right side: contact form with subtle fields -->
+                <div class="contact-form">
+                    <h2>Send a note — rooted dialogue</h2>
+                    <form action="#" method="post" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full name *</label>
+                            <input type="text" id="name" name="name" required placeholder="e.g. Elara Blackwood">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address *</label>
+                            <input type="email" id="email" name="email" required placeholder="hello@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="garden-consult">Garden consultation / design</option>
+                                <option value="visit">Visit or workshop inquiry</option>
+                                <option value="propagation">Propagation & seed bank</option>
+                                <option value="press">Press / collaboration</option>
+                                <option value="other">Other — root whispers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Share your thoughts, garden dreams, or questions about black-and-white gardening philosophy..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send → cultivate reply</button>
+                        <p class="note-text">We honor your words like heirloom seeds — reply within 2–3 business days. No data shared beyond our sanctuary.</p>
+                    </form>
+                    <div id="formFeedback" style="margin-top: 16px; font-size: 0.9rem; text-align: center;"></div>
+                </div>
+            </div>
+
+            <!-- extra unique block: map-like visual + invitation -->
+            <div class="garden-connect">
+                <div class="connect-text">
+                    <h3>Walk the monochrome grounds</h3>
+                    <p>Our 3-acre trial garden is a living canvas of contrast: charcoal gravel paths, silver foliage labyrinths, and sculptural plantings. Visitors are welcomed to touch, smell, and absorb the quiet intensity of black & white horticulture. Book a guided tour or attend seasonal pruning salons.</p>
+                    <p style="margin-top: 12px;"><strong>⟡ Upcoming:</strong> 'Shadow & Soil' symposium — April 12, 2025. Limited seats.</p>
+                </div>
+                <div class="connect-img">
+                    <img src="https://picsum.photos/id/96/400/280" alt="Orvessa monochrome garden pathway with dark mulch and white blooms">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Orvessa Root Haven</h3>
+                <p>rooted in contrast · growing tomorrow</p>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Visit & correspond</strong></p>
+                <p>📍 142 Blackwood Lane, Evergreen Valley,<br> &nbsp;&nbsp;&nbsp;Ashford, CA 95684, USA</p>
+                <p>📞 <a href="tel:+15519876543">+1 (551) 987-6543</a></p>
+                <p>✉️ hello@orvessaroothaven.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Orvessa Root Haven — Black & White Gardening Atelier. All text and imagery cultivated with intention.
+        </div>
+    </div>
+</footer>
+
+<!-- simple form handling simulation (demo, no backend, but shows interactive feedback) -->
+<script>
+    (function() {
+        const form = document.getElementById('contactForm');
+        const feedbackDiv = document.getElementById('formFeedback');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // get values for a lightweight validation
+                const name = document.getElementById('name')?.value.trim();
+                const email = document.getElementById('email')?.value.trim();
+                const message = document.getElementById('message')?.value.trim();
+                
+                if (!name || !email || !message) {
+                    feedbackDiv.innerHTML = '<span style="color:#b91c1c;">✧ Please fill in all required fields (name, email, message). ✧</span>';
+                    return;
+                }
+                if (!email.includes('@') || !email.includes('.')) {
+                    feedbackDiv.innerHTML = '<span style="color:#b91c1c;">✧ Please provide a valid email address. ✧</span>';
+                    return;
+                }
+                // simulate sending
+                feedbackDiv.innerHTML = '<span style="color:#2c5e2e;">⟡ Sending your message… your words travel through soil and signal. ⟡</span>';
+                setTimeout(() => {
+                    feedbackDiv.innerHTML = '<span style="color:#1f4f1f;">✓ Thank you, ' + name + '! Your message has reached Orvessa Root Haven. We’ll reply within 48 hours — meanwhile, observe the shadows in your garden. ✓</span>';
+                    form.reset();
+                    setTimeout(() => {
+                        feedbackDiv.innerHTML = '';
+                    }, 8000);
+                }, 700);
+            });
+        }
+    })();
+</script>
+</body>
+</html>

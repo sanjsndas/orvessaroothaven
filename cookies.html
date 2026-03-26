@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Orvessa Root Haven | Cookies Policy — Digital Footprint & Consent</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / nav (identical to main page style) */
+        .site-header {
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background-color: rgba(255,255,255,0.96);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+        .logo p {
+            font-size: 0.85rem;
+            color: #3a3a3a;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            margin-left: 32px;
+            color: #1f1f1f;
+            font-weight: 500;
+            transition: 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #000;
+            color: #000;
+        }
+
+        /* page title section — consistent with contact & terms */
+        .page-header {
+            padding: 60px 0 40px;
+            background: #fefefe;
+            border-bottom: 1px solid #eee;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: #000;
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: #2c2c2c;
+            max-width: 760px;
+        }
+
+        /* policy main content area — refined, spacious, legible */
+        .policy-section {
+            padding: 70px 0 90px;
+        }
+        .policy-card {
+            background: #fefefe;
+            border-radius: 32px;
+            border: 1px solid #ececec;
+            padding: 48px 52px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+        }
+        .policy-card h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 1.8rem 0 1rem 0;
+            color: #000;
+            letter-spacing: -0.3px;
+            border-left: 4px solid #000;
+            padding-left: 20px;
+        }
+        .policy-card h2:first-of-type {
+            margin-top: 0;
+        }
+        .policy-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem 0;
+            color: #1a1a1a;
+        }
+        .policy-card p {
+            margin-bottom: 1rem;
+            color: #2b2b2b;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .policy-card ul, .policy-card ol {
+            margin: 0.8rem 0 1.2rem 2rem;
+            color: #2b2b2b;
+        }
+        .policy-card li {
+            margin-bottom: 0.5rem;
+        }
+        .policy-card a {
+            color: #1e1e1e;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-weight: 500;
+        }
+        .policy-card a:hover {
+            color: #000;
+            text-decoration-thickness: 2px;
+        }
+        .highlight-note {
+            background: #f7f7f7;
+            padding: 20px 28px;
+            border-radius: 28px;
+            margin: 28px 0 16px;
+            border-left: 4px solid #2c2c2c;
+            font-style: normal;
+        }
+        .badge-cookie {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-right: 8px;
+        }
+        hr {
+            margin: 32px 0;
+            border: none;
+            border-top: 1px solid #e2e2e2;
+        }
+
+        /* cookie consent simulation bar (lightweight preview) */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 1px solid #ddd;
+            box-shadow: 0 -8px 24px rgba(0,0,0,0.05);
+            padding: 18px 24px;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        .cookie-consent-banner.show {
+            transform: translateY(0);
+        }
+        .cookie-banner-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .cookie-text {
+            flex: 3;
+            font-size: 0.9rem;
+            color: #2c2c2c;
+        }
+        .cookie-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-cookie {
+            background: #000;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-cookie-outline {
+            background: transparent;
+            border: 1px solid #aaa;
+            color: #1f1f1f;
+        }
+        .btn-cookie-outline:hover {
+            border-color: #000;
+            background: #f5f5f5;
+        }
+        .btn-cookie:hover {
+            background: #2a2a2a;
+        }
+
+        /* footer */
+        footer {
+            background: #000;
+            color: #e0e0e0;
+            padding: 48px 0 32px;
+            margin-top: 20px;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+        .footer-contact p {
+            margin-bottom: 8px;
+        }
+        .footer-contact a {
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-links a {
+                margin: 0 12px;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .policy-card {
+                padding: 28px 24px;
+            }
+            .cookie-banner-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Orvessa Root Haven</h1>
+            <p>where roots meet resilience · monochrome gardening philosophy</p>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms Of Privacy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies Policy</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1>Cookies Policy<br>tending digital footprints</h1>
+            <p>Like the hidden mycelium beneath our gardens, cookies help us understand how you interact with our haven. This policy explains what we collect, why we use it, and how you maintain control over your digital soil.</p>
+        </div>
+    </div>
+
+    <div class="policy-section">
+        <div class="container">
+            <div class="policy-card">
+                <h2>1. What are cookies?</h2>
+                <p>Cookies are small text files stored on your device (computer, tablet, or mobile) when you visit a website. They allow the site to recognize your device, remember your preferences, and improve your experience. In the spirit of monochrome gardening — cookies function like subtle markers in the soil: they help us see what thrives and where to nurture a smoother journey.</p>
+                
+                <h2>2. How we use cookies at Orvessa Root Haven</h2>
+                <p>We use cookies to ensure our website functions properly, to analyze anonymous usage patterns, and to honor your browsing preferences. Because we value clarity and contrast, we never sell your data or use intrusive tracking for advertising. The types of cookies we deploy include:</p>
+                <ul>
+                    <li><span class="badge-cookie">Essential</span> <strong>Strictly necessary cookies</strong> — these enable core functionality such as page navigation, form submissions, and secure areas. Without them, the site would not perform correctly.</li>
+                    <li><span class="badge-cookie">Analytical</span> <strong>Performance & analytics cookies</strong> — we gather aggregated data about how visitors use our pages (e.g., most visited articles, garden workshop interest). This helps us refine our content and atelier offerings.</li>
+                    <li><span class="badge-cookie">Preference</span> <strong>Functional cookies</strong> — remember selections like language or if you’ve dismissed our cookie banner, making your visit more seamless.</li>
+                </ul>
+                <p>We do <strong>not</strong> use marketing or third-party targeting cookies that track your activity across unrelated websites. Your digital privacy aligns with our philosophy: slow, intentional, and respectful.</p>
+
+                <div class="highlight-note">
+                    <p>🌿 <strong>Rooted transparency:</strong> Any analytics tools we use (such as lightweight, privacy-first services) process IP addresses in an anonymized form. Data never leaves our care, and we refresh cookie consents annually or after significant policy updates.</p>
+                </div>
+
+                <h2>3. Managing your cookie preferences</h2>
+                <p>You have full control. When you first visit our website, a cookie banner allows you to accept or decline non-essential cookies. You can also modify your preferences at any time via your browser settings or by clicking the “Cookie Preferences” link (available in the footer of our site). Most browsers accept cookies by default, but you can adjust settings to block or delete cookies. Please note that disabling essential cookies may impact site functionality.</p>
+                <ul>
+                    <li><strong>Google Chrome:</strong> Settings → Privacy and security → Cookies and other site data.</li>
+                    <li><strong>Mozilla Firefox:</strong> Options → Privacy & Security → Cookies and Site Data.</li>
+                    <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data.</li>
+                    <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions.</li>
+                </ul>
+                <p>If you choose to reject analytics cookies, your visit remains entirely anonymous; we respect that decision as we would respect a shadow in the garden — present yet undisturbed.</p>
+
+                <h2>4. Third-party services & embedded content</h2>
+                <p>Our website may contain links to external resources, garden directories, or embedded content (such as a short video about our pruning salons). Those third-party platforms have their own cookie policies. We encourage you to review them, as we have no control over their data practices. Orvessa Root Haven does not embed tracking pixels or social media trackers that collect personal data without explicit interaction.</p>
+
+                <h2>5. Duration & storage of cookies</h2>
+                <p>We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device for up to 12 months, unless deleted). Persistent cookies help us remember your preferences across repeat visits — like a perennial returning each season. You can delete all stored cookies through your browser settings at any time.</p>
+
+                <h2>6. Updates to this Cookies Policy</h2>
+                <p>Just as our garden evolves, we may occasionally refine this policy to reflect changes in technology, legal obligations, or operational needs. The “Last updated” date at the bottom of this page will indicate the latest revision. We encourage you to review this page periodically. Continued use of our site after modifications implies acknowledgment of the updated terms.</p>
+
+                <hr>
+                <p style="font-size: 0.9rem; color: #555;">If you have any questions regarding our use of cookies or digital privacy, please reach out to our data stewardship team: <a href="mailto:privacy@orvessaroothaven.com">privacy@orvessaroothaven.com</a> or via mail at 142 Blackwood Lane, Evergreen Valley, Ashford, CA 95684, USA.</p>
+                <p style="font-size: 0.85rem; margin-top: 16px;"><strong>Last updated:</strong> March 23, 2026</p>
+            </div>
+
+            <!-- subtle decorative garden quote block to maintain thematic continuity -->
+            <div style="margin-top: 48px; text-align: center; border-top: 1px solid #efefef; padding-top: 40px;">
+                <p style="font-style: italic; color: #4b4b4b; max-width: 680px; margin: 0 auto;">“Like healthy soil, a transparent digital ecosystem cultivates trust. We tend both with the same care.”<br> — Orvessa Root Haven, digital atelier</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Cookie consent demo banner (lightweight simulation, shows once per session) -->
+<div id="cookieBanner" class="cookie-consent-banner">
+    <div class="cookie-banner-inner">
+        <div class="cookie-text">
+            🌱 <strong>Your privacy, our reverence.</strong> Orvessa Root Haven uses essential cookies for site functionality and anonymous analytics to improve your experience. By clicking “Accept All”, you consent to our use of cookies as described in our <a href="cookies.html" style="color:#000; text-decoration:underline;">Cookies Policy</a>. You may also customize preferences.
+        </div>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" class="btn-cookie">Accept All</button>
+            <button id="declineCookies" class="btn-cookie btn-cookie-outline">Decline Non-Essential</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Orvessa Root Haven</h3>
+                <p>rooted in contrast · growing tomorrow</p>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Visit & correspond</strong></p>
+                <p>📍 142 Blackwood Lane, Evergreen Valley,<br> &nbsp;&nbsp;&nbsp;Ashford, CA 95684, USA</p>
+                <p>📞 <a href="tel:+15519876543">+1 (551) 987-6543</a></p>
+                <p>✉️ hello@orvessaroothaven.com</p>
+                <p><a href="cookies.html" style="color:#ccc;">Cookie preferences</a> | <a href="privacy.html" style="color:#ccc;">Privacy</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Orvessa Root Haven — Black & White Gardening Atelier. All text and imagery cultivated with intention.
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        // Cookie consent banner simulation — stores a simple localStorage flag to respect user choice.
+        // This demonstrates the policy in action without actual third-party trackers.
+        const banner = document.getElementById('cookieBanner');
+        const acceptBtn = document.getElementById('acceptCookies');
+        const declineBtn = document.getElementById('declineCookies');
+        
+        // Key for storing consent state
+        const CONSENT_KEY = 'orvessa_cookie_consent';
+        const getConsent = () => localStorage.getItem(CONSENT_KEY);
+        const setConsent = (value) => localStorage.setItem(CONSENT_KEY, value);
+        
+        // Hide banner and optionally apply "preferences" (for demo, we just simulate no analytics)
+        function hideBanner() {
+            if (banner) banner.classList.remove('show');
+        }
+        
+        function applyConsentMode(consentType) {
+            // In a real scenario, this would enable/disable GA or analytics scripts.
+            // Here we just reflect in console and store a flag, and also show a tiny feedback (optional)
+            if (consentType === 'full') {
+                console.log('[Orvessa Root Haven] Full cookie consent granted. Analytics & functional cookies active.');
+                // could simulate: enable dummy analytics events but we keep silent
+            } else if (consentType === 'essential') {
+                console.log('[Orvessa Root Haven] Only essential cookies enabled. Analytics disabled.');
+            }
+        }
+        
+        function initConsent() {
+            const existing = getConsent();
+            if (existing === 'full') {
+                applyConsentMode('full');
+                hideBanner();
+            } else if (existing === 'essential') {
+                applyConsentMode('essential');
+                hideBanner();
+            } else {
+                // no consent stored — show banner
+                if (banner) banner.classList.add('show');
+            }
+        }
+        
+        function acceptAll() {
+            setConsent('full');
+            applyConsentMode('full');
+            hideBanner();
+            // optional subtle notification (non-intrusive)
+            showToastMessage('✓ Cookie preferences saved. Thank you for supporting our digital sanctuary.');
+        }
+        
+        function declineNonEssential() {
+            setConsent('essential');
+            applyConsentMode('essential');
+            hideBanner();
+            showToastMessage('✓ Only essential cookies are active. No analytics tracking will be performed.');
+        }
+        
+        // simple ephemeral toast to inform user of action
+        function showToastMessage(msg) {
+            let toast = document.createElement('div');
+            toast.innerText = msg;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '24px';
+            toast.style.left = '24px';
+            toast.style.backgroundColor = '#1f1f1f';
+            toast.style.color = '#f0f0f0';
+            toast.style.padding = '12px 20px';
+            toast.style.borderRadius = '40px';
+            toast.style.fontSize = '0.85rem';
+            toast.style.fontFamily = 'Inter, sans-serif';
+            toast.style.zIndex = '1100';
+            toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            toast.style.borderLeft = '3px solid #e0e0e0';
+            toast.style.maxWidth = '320px';
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 3800);
+        }
+        
+        if (acceptBtn) acceptBtn.addEventListener('click', acceptAll);
+        if (declineBtn) declineBtn.addEventListener('click', declineNonEssential);
+        
+        // Also if user clicks any "Cookie preferences" footer link, they can reset banner? We'll add a small helper: 
+        // For demo, if they click a "Cookie preferences" we could clear consent and reshow banner. 
+        const prefLinks = document.querySelectorAll('a[href="cookies.html"]');
+        // not mandatory but adds realism: but only if user explicitly wants to change consent later via a "reset" button. 
+        // We'll also simulate a reset link within the footer extra? actually footer has cookie preferences link (pointing to same page)
+        // For better usability, we provide a tiny function that allows clearing consent if user clicks a specific button? 
+        // but we keep straightforward. 
+        // Additionally, for consistency we listen to any hash change? not needed.
+        
+        // If page is loaded, also check for URL param ?reset_consent to allow testing.
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('reset_consent') === 'true') {
+            localStorage.removeItem(CONSENT_KEY);
+            if (banner) banner.classList.add('show');
+            showToastMessage('Cookie preferences have been reset. You can customize your choices again.');
+        }
+        
+        // small helper for any "manage cookies" inside policy (in case user clicks internal link)
+        // but not required: just reset from within page with a dynamic link? We'll create a small text inside policy-card 
+        const manageLink = document.createElement('span');
+        // but better: the policy card already contains instructions for browser settings.
+        // for completeness, we inject a "reset preferences" button inside the policy? optional elegant:
+        const resetButtonContainer = document.createElement('div');
+        resetButtonContainer.style.marginTop = '20px';
+        resetButtonContainer.style.textAlign = 'right';
+        const resetPrefBtn = document.createElement('button');
+        resetPrefBtn.innerText = '⟡ Reset cookie preferences ⟡';
+        resetPrefBtn.style.background = 'none';
+        resetPrefBtn.style.border = '1px solid #ccc';
+        resetPrefBtn.style.padding = '6px 14px';
+        resetPrefBtn.style.borderRadius = '30px';
+        resetPrefBtn.style.fontSize = '0.75rem';
+        resetPrefBtn.style.cursor = 'pointer';
+        resetPrefBtn.style.fontFamily = 'inherit';
+        resetPrefBtn.style.color = '#3b3b3b';
+        resetPrefBtn.addEventListener('click', () => {
+            localStorage.removeItem(CONSENT_KEY);
+            if (banner) banner.classList.add('show');
+            showToastMessage('Cookie preferences reset. Banner will reappear on next visit or refresh.');
+        });
+        const policyCard = document.querySelector('.policy-card');
+        if (policyCard && !document.querySelector('.reset-cookie-embedded')) {
+            resetButtonContainer.appendChild(resetPrefBtn);
+            resetButtonContainer.classList.add('reset-cookie-embedded');
+            policyCard.appendChild(resetButtonContainer);
+        }
+        
+        initConsent();
+    })();
+</script>
+</body>
+</html>
